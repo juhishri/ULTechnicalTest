@@ -1,0 +1,23 @@
+﻿Locators on ul.com- 
+1. Subheadings in bottom menu bar:-
+	a. CAREERS - //span[text()='Careers']
+	b.HELP AND SUPPORT - //span[text()='Help and Support']
+	c.CONTACT CENTER - //span[text()='Contact Center']
+		
+2.Subitems of Career subheaders:-
+	a. CAREERS - 
+		-Working at UL - //ul[contains(@class,'--footer-nav')]//a[@href='/about/careers']
+		-Job Search - //ul[contains(@class,'--footer-nav')]//a[text()='Job Search']
+
+3.Image shown in News section, if exist:-
+	 By Locator = By.CssSelector("#node--card-187916 a div.image-container img");
+     IWebElement UserName = driver.FindElement(Locator);
+
+4.Choose Germany region selctor:-
+	using OpenQA.Selenium.Support.UI;
+    var selectRegion = driver.FindElement(By.Id("choose-region"));
+	var selectElement = new SelectElement(selectRegion);
+		 //select by value
+	selectElement.SelectByValue("https://germany.ul.com/"); 
+		// select by text
+	selectElement.SelectByText("Germany (Deutsch)");
